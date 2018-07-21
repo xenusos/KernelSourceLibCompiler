@@ -5,6 +5,7 @@
 */  
 #include <xenus_lazy.h>
 
+
 void* __cdecl operator new(size_t Size)
 {
 	return malloc(Size);
