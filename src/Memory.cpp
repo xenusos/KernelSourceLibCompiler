@@ -6,23 +6,33 @@
 #include <xenus_lazy.h>
 
 
-void* __cdecl operator new(size_t Size)
+void* __cdecl operator new(size_t size)
 {
-	return malloc(Size);
+#ifdef CONFIG_DBG_LIBCOM_MEM
+	void * ptr;
+	ptr = malloc(size);
+	printf("[dbg libcompiler] allocate: %p (size: %lli)\n", ptr, size);
+	return ptr;
+#else
+	return malloc(size);
+#endif
 }
 
-void* __cdecl operator new(size_t Size, unsigned long * AllocationContext)
+void* __cdecl operator new(size_t size, unsigned long * AllocationContext)
 {
-	return malloc(Size);
+	return ::operator new(size);
 }
 
-void* __cdecl operator new[](size_t Size, int PoolType)
+void* __cdecl operator new[](size_t size, int PoolType)
 {
-	return malloc(Size);
+	return ::operator new(size);
 }
 
 void __cdecl operator delete(void* pObject)
 {
+#ifdef CONFIG_DBG_LIBCOM_MEM
+	printf("[dbg libcompiler] deallocate: %p\n", pObject);
+#endif
 	free(pObject);
 }
 
@@ -33,5 +43,5 @@ void __cdecl operator delete(void* pObject, size_t s)
 
 void __cdecl operator delete[](void* pObject)
 {
-	free(pObject);
+	::operator delete(pObject);
 }
