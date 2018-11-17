@@ -17,6 +17,10 @@
   <ItemGroup>
     <MASM Include="src\NullStubs.asm" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\libcompiler.hpp" />
+    <ClInclude Include="include\MSVCIntrinsics.hpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{E3103EDB-533A-42AD-BE85-1118F2B670AC}</ProjectGuid>
