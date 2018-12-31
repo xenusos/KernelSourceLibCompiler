@@ -22,7 +22,12 @@ XENUS_BEGIN_C
             long b
         );
     #endif
-        
+    
+    #if !defined(DEFINED__bittestandset64)
+        #define DEFINED__bittestandset64
+        unsigned char _bittestandset64(__int64 *a, __int64 b);
+    #endif
+
     #if !defined(DEFINED__ReadWriteBarrier)
         #define DEFINED__ReadWriteBarrier
         extern void _ReadWriteBarrier(void);
