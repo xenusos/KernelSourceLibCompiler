@@ -7,19 +7,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Cpp.cpp" />
-    <ClCompile Include="src\FPU.c" />
-    <ClCompile Include="src\Memory.cpp" />
+    <ClCompile Include="Source\Cpp.cpp" />
+    <ClCompile Include="Source\FPU.c" />
+    <ClCompile Include="Source\Memory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="src\NullStubs.asm" />
+    <MASM Include="Source\NullStubs.asm" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\libcompiler.hpp" />
-    <ClInclude Include="include\MSVCIntrinsics.hpp" />
+    <ClInclude Include="Include\libcompiler.hpp" />
+    <ClInclude Include="Include\MSVCIntrinsics.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
