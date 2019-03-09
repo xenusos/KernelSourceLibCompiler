@@ -5,13 +5,12 @@
 */  
 #include <xenus_lazy.h>
 
-
 void* __cdecl operator new(size_t size)
 {
 #ifdef CONFIG_DBG_LIBCOM_MEM
     void * ptr;
     ptr = malloc(size);
-    printf("[dbg libcompiler] allocate: %p (size: %lli)\n", ptr, size);
+    printf("[dbg libcompiler] allocate: %p (size: %zu)\n", ptr, size);
     return ptr;
 #else
     return malloc(size);
