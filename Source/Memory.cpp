@@ -44,3 +44,8 @@ void __cdecl operator delete[](void* pObject)
 {
     ::operator delete(pObject);
 }
+
+void* __cdecl operator new(size_t idc, void * placement)
+{
+    return placement;
+}
