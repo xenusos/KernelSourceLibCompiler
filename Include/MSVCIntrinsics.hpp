@@ -53,4 +53,12 @@ XENUS_BEGIN_C
             long Value
             );
     #endif
+    #if !defined(DEFINED__InterlockedCompareExchange64)
+        #define DEFINED__InterlockedCompareExchange64
+        extern __int64 _InterlockedCompareExchange64(
+            __int64 volatile * Destination,
+            __int64 Exchange,
+            __int64 Comparand
+        );
+    #endif
 XENUS_END_C
