@@ -4,4 +4,7 @@
 
 #include "MSVCIntrinsics.hpp"
 
-void* __cdecl operator new(size_t idc, void * placement);
+extern void* __cdecl operator new(size_t idc, void * placement);
+
+extern int RuntimeCallConstructors();
+extern void RuntimeCallDeconstructors();

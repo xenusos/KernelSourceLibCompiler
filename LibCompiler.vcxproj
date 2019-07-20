@@ -7,6 +7,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Constructors.cpp" />
     <ClCompile Include="Source\Cpp.cpp" />
     <ClCompile Include="Source\FPU.c" />
     <ClCompile Include="Source\Memory.cpp" />
